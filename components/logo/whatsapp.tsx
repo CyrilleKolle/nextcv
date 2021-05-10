@@ -1,8 +1,13 @@
 import React from "react";
+import styled from "styled-components";
+import tw from "twin.macro";
 
+const SvgTag = styled.div`
+  ${tw`mr-5 shadow-xl rounded-full`}
+`;
 export const Whatsapp: React.FC = () => {
   return (
-    <>
+    <SvgTag>
       <svg
         width="48"
         height="48"
@@ -21,6 +26,6 @@ export const Whatsapp: React.FC = () => {
           fill="#FDFDFD"
         />
       </svg>
-    </>
+    </SvgTag>
   );
 };

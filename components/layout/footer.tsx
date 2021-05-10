@@ -3,7 +3,8 @@ import tw from "twin.macro";
 import { Address, Services, SocialIcons } from "./../footer";
 
 const FooterWrapper = styled.div`
-  ${tw`flex flex-row justify-evenly border-t-2 border-green-600 w-full bg-gray-300 w-screen`}
+  ${tw`flex flex-row justify-between content-center flex-wrap px-20 py-5`}
+  background-color: rgb(0, 0, 0, 0.5);
 `;
 function Footer() {
   return (
@@ -11,7 +12,7 @@ function Footer() {
       <FooterWrapper>
         <Address />
         <SocialIcons />
-        <Services />
+        {/* <Services /> */}
       </FooterWrapper>
     </>
   );

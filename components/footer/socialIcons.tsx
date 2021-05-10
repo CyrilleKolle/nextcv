@@ -1,10 +1,18 @@
 import React from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
-import { Facebook, Instagram, Whatsapp } from "../logo";
+import {
+  Facebook,
+  Instagram,
+  Whatsapp,
+  LinkedIn,
+  Twitter,
+  Mail,
+  Telephone,
+} from "../logo";
 
 const ServicesWrapper = styled.div`
-  ${tw`flex flex-row p-2 right-0`}
+  ${tw`flex flex-row justify-items-center content-center flex-wrap`}
 `;
 
 export const SocialIcons: React.FC = () => {
@@ -12,8 +20,12 @@ export const SocialIcons: React.FC = () => {
     <>
       <ServicesWrapper>
         <Facebook />
-        <Instagram/>
-        <Whatsapp/>
+        <Instagram />
+        <Whatsapp />
+        <LinkedIn />
+        <Twitter />
+        <Mail />
+        <Telephone />
       </ServicesWrapper>
     </>
   );
