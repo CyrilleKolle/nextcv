@@ -2,6 +2,7 @@
   "name": "my-next-cv",
   "version": "0.1.0",
   "private": true,
+  "type": "commonjs",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -10,7 +11,8 @@
   "dependencies": {
     "@emotion/react": "^11.1.5",
     "@emotion/styled": "^11.3.0",
-    "@types/styled-components": "^5.1.9",
+    "@types/styled-components": "^5.1.26",
+    "caniuse-lite": "^1.0.30001422",
     "gray-matter": "^4.0.3",
     "next": "10.2.0",
     "next-images": "^1.7.0",
@@ -21,18 +23,19 @@
     "remark": "^13.0.0",
     "remark-html": "^13.0.1",
     "styled-components": "^5.2.3",
+    "tw.macro": "^1.2.0",
     "twin.macro": "^2.4.0"
   },
   "devDependencies": {
     "@babel/core": "^7.13.16",
     "@babel/preset-react": "^7.13.13",
     "@types/node": "^15.0.1",
-    "@types/react": "^17.0.4",
+    "@types/react": "18.0.1",
     "@types/react-star-rating-component": "^1.4.0",
-    "autoprefixer": "^10.2.5",
+    "autoprefixer": "^10.4.12",
     "babel-plugin-macros": "^3.0.1",
-    "postcss": "^8.2.13",
-    "tailwindcss": "^2.1.2",
+    "postcss": "^8.4.18",
+    "tailwindcss": "^3.2.1",
     "typescript": "^4.2.4"
   },
   "resolutions": {

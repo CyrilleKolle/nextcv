@@ -1,11 +1,16 @@
 module.exports = {
-  purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
-  darkMode: false, // or 'media' or 'class'
+  mode: "jit",
+  content: [
+    "./public/**/*.html",
+    "./src/**/*.{html,js,jsx,ts,tsx,vue}",
+    "./components/**/*.{html,js,ts,tsx}",
+    "./pages/**/*.{html,js,ts,tsx}",
+  ],
   theme: {
     extend: {},
   },
-  variants: {
-    extend: {},
-  },
   plugins: [],
+  corePlugins: {
+    backgroundOpacity: false,
+  },
 };
