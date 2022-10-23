@@ -11,14 +11,16 @@ interface NavLinkProps {
   passHref?: boolean;
   router: NextRouter;
   bgColor?: boolean;
-  bgdColor?: boolean;
+  hasBgdColor?: boolean;
 }
 
-const Wrapper = styled.a<{ active: boolean; bgdColor: boolean }>`
+const Wrapper = styled.a<{ active: boolean; hasBgdColor: boolean }>`
   ${tw`transition duration-500 ease-in-out transform text-black p-7 font-bold items-center my-auto justify-center lg:(mx-2 )`}
-  ${({ active }) => active && tw``}; 
+  ${({ active }) => active && tw`underline`}; 
   background-color: ${(props) =>
-    props.bgdColor ? tw`bg-blue-400` : tw`bg-red-200`}
+    props.hasBgdColor && "#375778"};
+  color:  ${(props) =>
+    props.hasBgdColor? "#FA255E" : "#090A0A"};
   transition: color 0.2s;
   
 `;
@@ -29,8 +31,8 @@ export const ActiveLink = withRouter<NavLinkProps>(
     const active: boolean = router ? router.route === rest.href : false;
     return (
       <Link {...rest}>
-        <Wrapper active={active} bgdColor={rest.bgdColor}>
-          {active && ""}
+        <Wrapper active={active} hasBgdColor={rest.hasBgdColor}>
+          {active}
           {children}
         </Wrapper>
       </Link>

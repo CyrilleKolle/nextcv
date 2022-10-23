@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import tw from "twin.macro";
+import Link from "next/link";
 import { useState } from "react";
 import { ActiveLink } from "../header/ActiveLink";
 
@@ -50,25 +51,15 @@ export const Header: React.FC = () => {
         <NameText>Cyrille Lia-Search</NameText>
       </NameHeader>
       <NavContainer>
-        <LinkItem key="Education" label="Home" href="/" bgdColor={true}/>
+        <LinkItem key="Education" label="Home" href="/"/>
         <LinkItem
           key="Experience"
           label="Experience"
           href="/Contact"
-         
-        ></LinkItem>
-        <LinkItem
-          key="contact"
-          label="Competencies"
-          href="/Contact"
           
         ></LinkItem>
-        <LinkItem
-          key="contact"
-          label="Kontact"
-          href="/Contact"
-          
-        ></LinkItem>
+        <LinkItem key="contact" label="Competencies" href="/Contact"></LinkItem>
+        <LinkItem key="contact" label="Kontact" href="/Contact" hasBgdColor={true}></LinkItem>
       </NavContainer>
     </NavBar>
   );
@@ -76,13 +67,13 @@ export const Header: React.FC = () => {
 
 export default Header;
 
-const LinkItem: React.FC<{ label: string; href: string; bgdColor?: boolean }> = ({
-  label,
-  href,
-  bgdColor,
-}) => {
+const LinkItem: React.FC<{
+  label: string;
+  href: string;
+  hasBgdColor?: boolean;
+}> = ({ label, href, hasBgdColor: hasBgdColor }) => {
   return (
-    <ActiveLink href={href} passHref bgdColor={bgdColor}>
+    <ActiveLink href={href} passHref hasBgdColor={hasBgdColor}>
       {label}
     </ActiveLink>
   );
