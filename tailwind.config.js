@@ -7,7 +7,12 @@ module.exports = {
     "./pages/**/*.{html,js,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'pinkish': '#C39EA0',
+        'softblack':'#151516'
+      },
+    },
   },
   plugins: [],
   corePlugins: {

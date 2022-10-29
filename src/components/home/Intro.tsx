@@ -1,34 +1,83 @@
 import React from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
+import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 
 const Wrapper = styled.div`
-  ${tw`flex flex-row h-full w-full`};
-`;
-const Title = styled.div`
-  ${tw``}
-`;
-const Description = styled.div`
-  ${tw`pt-6 md:p-8 text-center md:text-left text-xs md:(text-xl mx-0 my-0) space-y-4 m-20 lg:text-3xl border-gray-500 leading-relaxed`}
-  font-family: Chalkduster, fantasy;
-`;
-const Image = styled.img`
-  ${tw`w-32 h-36 md:(w-48 my-0)md:h-96 mt-32 rounded-xl mx-auto shadow-2xl`}
-`;
+  ${tw`flex flex-col md:(flex-row) w-full`};
 
+`;
+const Description = styled(motion.div)`
+  ${tw`md:w-2/3 flex block items-center justify-center md:(items-start justify-start)`};
+`;
+const DescriptionText = styled.p`
+  ${tw`text-2xl p-4 sm:(p-0 text-2xl) md:(text-7xl) flex flex-wrap flex-wrap whitespace-pre-line text-softblack leading-tight`};
+  font-family: Fantasy;
+`;
+const Img = styled.img`
+  ${tw`object-fill`};
+`;
+const ImageDiv = styled(motion.div)`
+  ${tw`md:w-1/3 content-center items-center flex justify-center md:justify-end shadow-none`}
+  min-height: 300px;
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+
+  @keyframes animation {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+`;
 export default function Intro() {
   return (
     <Wrapper>
-      <Image src="/cv.jpg" />
-      <Description>
-        Att bli programmerare är ett av de bästa besluten jag någonsin har
-        tagit. Att ständigt få bli utmanad och hitta nya lösningar, gör att
-        jobbet alltid är spännande.Hittills har jag jobbat mycket med frontend
-        och backend med hjälp av javascript, även om jag har lärt mig andra
-        språk och fortfarande lär mig, och kommer därför att uppskatta chansen
-        att lära av dig, medan jag i gengäld kommer med positivitet, entusiasm,
-        motivation och naturligtvis allt färdigheter som jag har fått från mina
-        studier
+      <ImageDiv
+        initial={{ opacity: 0, x: -100 }}
+        exit={{ opacity: 1 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ type: "spring", duration: 2 }}
+        variants={{
+          hidden: {
+            scale: 0.7,
+            opacity: 0,
+          },
+          visible: {
+            scale: 1,
+            opacity: 1,
+            transition: {
+              delay: 0.4,
+            },
+          },
+        }}
+      >
+        <Img src="/ai_ml.png" alt="image of bart" />
+      </ImageDiv>
+
+      <Description
+        initial={{ opacity: 0, x: 200 }}
+        exit={{ opacity: 1 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ type: "spring", duration: 2 }}
+        variants={{
+          hidden: {
+            scale: 0.7,
+            opacity: 0,
+          },
+          visible: {
+            scale: 1,
+            opacity: 1,
+            transition: {
+              delay: 0.4,
+            },
+          },
+        }}
+      >
+        <DescriptionText>
+          Att bli programmerare är ett av de programmerare är ett av de
+        </DescriptionText>
       </Description>
     </Wrapper>
   );

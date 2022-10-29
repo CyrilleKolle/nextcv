@@ -15,14 +15,12 @@ interface NavLinkProps {
 }
 
 const Wrapper = styled.a<{ active: boolean; hasBgdColor: boolean }>`
-  ${tw`transition duration-500 ease-in-out transform text-black p-7 font-bold items-center my-auto justify-center lg:(mx-2 )`}
-  ${({ active }) => active && tw`underline`}; 
-  background-color: ${(props) =>
-    props.hasBgdColor && "#375778"};
-  color:  ${(props) =>
-    props.hasBgdColor? "#FA255E" : "#090A0A"};
+  ${tw`transition duration-500 ease-in-out transform text-black p-7 items-center my-auto justify-center leading-tight tracking-wider lg:(mx-2 )`}
+  ${({ active }) => active && tw`underline`};
+  background-color: ${(props) => props.hasBgdColor && "#375778"};
+  color: ${(props) => (props.hasBgdColor ? "#C39EA0" : "#090A0A")};
   transition: color 0.2s;
-  
+  font-family: Fantasy;
 `;
 
 export const ActiveLink = withRouter<NavLinkProps>(

@@ -1,4 +1,5 @@
 import React, { ReactNode } from "react";
+import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import styled from "styled-components";
 import tw from "twin.macro";
 import Footer from "./footer";
@@ -9,7 +10,7 @@ interface PageProps {
 }
 
 const Wrapper = styled.main`
-  ${tw`flex-grow relative mt-40`}
+  ${tw`flex-grow relative`}
   background-image: 'inherit';
 `;
 const OuterWrapper = styled.div`
@@ -38,8 +39,8 @@ export const Page: React.FC<PageProps> = (props) => {
         <Header />
         <Wrapper>{props.children}</Wrapper>
         {/* <FilterMobile>Filter</FilterMobile> */}
+        <Footer />
       </OuterWrapper>
-      <Footer />
     </>
   );
 };

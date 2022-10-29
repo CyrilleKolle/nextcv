@@ -1,35 +1,57 @@
 import React from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
-import { Title } from "../layout/Title";
+import CompentencyCard from "./CompetencyCard";
 
 type CompetencyProps = {
-  competencies?: string[];
+  competencies?: Compentencies[];
 };
-const Competency = styled.div`
-  ${tw`bg-gray-500 text-gray-900 mb-4 text-lg h-12 rounded-lg shadow-2xl content-center font-extralight flex flex-wrap`}
-  min-width: 300px;
-  p {
-    ${tw`mx-auto p-2`}
-  }
-`;
+
+interface Compentencies {
+  label: string;
+  description: string;
+  image: string;
+}
+
 const CompetenciesContainer = styled.div`
-  ${tw`flex flex-row md:flex-col text-center content-center`}
+${tw`grid grid-rows-1 md:(grid-flow-col grid-rows-2 grid) lg:(grid-rows-1) justify-between`}
 `;
 
 const Wrapper = styled.div`
-  ${tw`px-2 rounded-xl content-center justify-evenly `}
+${tw`p-4 gap-4 md:p-20 content-center justify-between bg-black`}
 `;
 
-export const Competencies: React.FC<CompetencyProps> = ({ competencies }) => {
+const Title = styled.p`
+${tw`leading-tight tracking-wider text-pinkish text-xl mb-10`}
+font-family: Fantasy;
+`;
+const Description = styled.p`
+  ${tw`text-white mt-10 text-lg`}
+`;
+export const Competencies: React.FC<CompetencyProps> = ({
+  competencies,
+}: CompetencyProps) => {
   return (
     <Wrapper>
+      <Title>Current Areas of Competency</Title>
+      <Description>
+        These are some of the work experiences I have gathered over the years
+        the last few years
+      </Description>
       <CompetenciesContainer>
-        {competencies.map((competency) => (
-          <Competency>
-            <p>{competency}</p>
-          </Competency>
-        ))}
+        {competencies != undefined ? (
+          <>
+            {competencies.map((competency) => (
+              <CompentencyCard
+                image={competency.image}
+                label={competency.label}
+                description={competency.description}
+              />
+            ))}
+          </>
+        ) : (
+          <p>oops no data availaible</p>
+        )}
       </CompetenciesContainer>
     </Wrapper>
   );
