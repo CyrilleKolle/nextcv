@@ -1,37 +1,35 @@
 import React from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
-import {Facebook} from "../logo/facebook"
+
+import {SvgLayout} from "../layout/SvgLayout"
 
 type CompetencyCardProps = {
   image?: string;
   label?: string;
-  description?: string;
 };
 
 const CompetencyCardContainer = styled.div`
-  ${tw`flex flex-row md:flex-col text-center content-center `}
+  ${tw`flex flex-row md:flex-col justify-center content-center my-5`};
 `;
 const Label = styled.p`
-  ${tw``}
+  ${tw`text-coal`};
 `;
 const CompetencySvg = styled.svg`
-  ${tw``}
+  ${tw``};
 `;
 const Description = styled.p`
-  ${tw``}
+  ${tw``};
 `;
 
 const CompetencyCard: React.FC<CompetencyCardProps> = ({
   image,
   label,
-  description,
 }) => {
   return (
     <CompetencyCardContainer>
-      <Facebook/>
+      <SvgLayout svg={image}/>
       <Label>{label}</Label>
-      <Description >{description}</Description>
     </CompetencyCardContainer>
   );
 };

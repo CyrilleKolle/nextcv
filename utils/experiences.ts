@@ -1,5 +1,5 @@
 type Experience = {
-    image: string
+  image: string;
   label: string;
   startYear: number | string;
   endYear: number | string;
@@ -17,12 +17,12 @@ export const ExperienceData: Experience[] = [
     position: "Intern",
   },
   {
-    image:"/house.jpg",
-    label:"Dagab",
+    image: "/house.jpg",
+    label: "Dagab",
     startYear: 2020,
     endYear: "Ongoing",
     location: "Göteborg",
-    position:"Lagerarbetare"
+    position: "Lagerarbetare",
   },
   {
     image: "/gear.png",
@@ -30,14 +30,14 @@ export const ExperienceData: Experience[] = [
     startYear: 2019,
     endYear: 2020,
     location: "Göteborg",
-    position: "Lagerarbetare"
+    position: "Lagerarbetare",
   },
   {
-    image:"/post.jpg",
-    label:"Postnord",
-    startYear:2019,
-    endYear:2019,
-    location:"Göteborg",
-    position:"Lagerarbetare"
-  }
+    image: "/post.jpg",
+    label: "Postnord",
+    startYear: 2019,
+    endYear: 2019,
+    location: "Göteborg",
+    position: "Lagerarbetare",
+  },
 ];

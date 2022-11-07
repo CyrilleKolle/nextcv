@@ -10,7 +10,10 @@ module.exports = {
     extend: {
       colors: {
         'pinkish': '#C39EA0',
-        'softblack':'#151516'
+        'softblack':'#151516',
+        'gold':'#D4AF37',
+        'pantone': '#FF6C2F',
+        'coal':'#333333'
       },
     },
   },

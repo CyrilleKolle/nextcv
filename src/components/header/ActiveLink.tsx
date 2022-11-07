@@ -15,10 +15,10 @@ interface NavLinkProps {
 }
 
 const Wrapper = styled.a<{ active: boolean; hasBgdColor: boolean }>`
-  ${tw`transition duration-500 ease-in-out transform text-black p-7 items-center my-auto justify-center leading-tight tracking-wider lg:(mx-2 )`}
-  ${({ active }) => active && tw`underline`};
+  ${tw`transition duration-500 ease-in-out transform text-black p-7 items-center my-auto justify-center leading-tight tracking-wider lg:(mx-2) hover:(text-pantone rounded)`}
+  ${({ active }) => active && tw`text-white underline`};
   background-color: ${(props) => props.hasBgdColor && "#375778"};
-  color: ${(props) => (props.hasBgdColor ? "#C39EA0" : "#090A0A")};
+  color: ${(props) => (props.hasBgdColor ? "#C39EA0" : "#C39EA0")};
   transition: color 0.2s;
   font-family: Fantasy;
 `;

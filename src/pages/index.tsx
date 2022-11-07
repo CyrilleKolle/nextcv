@@ -7,8 +7,12 @@ import Intro from "../components/home/Intro";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import { Competencies } from "../components/home/Competencies";
 import { ExperienceData } from "../../utils/experiences";
+import { CompetenciesData } from "../../utils/competencies";
+import { EducationData } from "../../utils/education";
 import { GetStaticProps } from "next";
 import { Experiences } from "../components/home/Experiences";
+import { Education } from "../components/home/Education";
+import {AboutMe} from "../components/home/AboutMe"
 
 type Experience = {
   image: string;
@@ -39,8 +43,10 @@ const Home: React.FC<Props> = ({ items }: Props) => {
         {
           <>
             <Intro />
-            <Competencies />
+            <Competencies competencies={CompetenciesData}/>
+            <AboutMe/>
             <Experiences experiences={ExperienceData} />
+            <Education schools={EducationData}/>
           </>
         }
       </Page>

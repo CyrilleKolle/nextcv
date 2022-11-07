@@ -15,7 +15,8 @@ const Wrapper = styled.main`
 `;
 const OuterWrapper = styled.div`
   ${tw`flex flex-col`}
-  background: linear-gradient(-45deg, #c5d5cb, #9fa8a3, #e3e0cf, #f6f6f8);
+  /* background: linear-gradient(-45deg, #c5d5cb, #9fa8a3, #e3e0cf, #f6f6f8); */
+  background: #000000;
   animation: gradient 15s ease infinite;
   background-size: 400% 400%;
 
