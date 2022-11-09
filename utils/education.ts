@@ -10,25 +10,25 @@ type Education = {
       title: "It-Högskolan",
       location:"Göteborg",
       description:"AI och Maskinlärning",
-      number:"01",
+      number:"1001",
     },
     {
         title: "It-Högskolan",
         location:"Göteborg",
         description:"Applikationsutvecklare",
-        number:"02",
+        number:"1002",
     },
     {
         title: "Uni Buea",
         location:"Buea",
         description:"Accounting",
-        number:"03",
+        number:"1003",
     },
     {
         title: "More",
         location:"Everywhere",
         description:"...",
-        number:"04",
+        number:"1004",
     },
   ];
   

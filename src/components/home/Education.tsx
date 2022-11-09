@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
 import EducationCard from "./EducationCard";
@@ -33,6 +33,7 @@ const Description = styled.p`
 export const Education: React.FC<EducationProps> = ({
   schools: schools,
 }: EducationProps) => {
+  const [viewPortEntered, setViewPortEntered] = useState(false);
   return (
     <Wrapper>
       <Title>Education</Title>
