@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
 import CountUp from "react-countup";
-import VisibilitySensor from "react-visibility-sensor"
-
+import VisibilitySensor from "react-visibility-sensor";
+import { motion, AnimatePresence } from "framer-motion";
 
 type EducationCardProps = {
   number?: string;
@@ -12,8 +12,11 @@ type EducationCardProps = {
   location?: string;
 };
 
-const EducationCardContainer = styled.div`
+const EducationCardContainer = styled(motion.div)`
   ${tw`flex flex-row md:flex-col justify-center content-center my-5`};
+`;
+const Wrapper = styled(motion.div)`
+  ${tw``};
 `;
 const Title = styled.p`
   ${tw`text-coal`};
@@ -25,7 +28,7 @@ const Number = styled.p`
   ${tw`text-white`};
 `;
 const Span = styled.span`
-  ${tw`text-white`};
+  ${tw`text-white font-black text-6xl`};
 `;
 const Location = styled.p`
   ${tw`text-white`}
@@ -40,23 +43,37 @@ const EducationCard: React.FC<EducationCardProps> = ({
   const [viewPortEntered, setViewPortEntered] = useState(false);
 
   return (
-    <EducationCardContainer>
-      <CountUp {...rest} start={viewPortEntered ? null : 0} end={parseInt(number)} delay={1}>
+    <EducationCardContainer
+      initial="hidden"
+      whileInView="visible"
+      exit={{x:-100}}
+      viewport={{ once: true }}
+      transition={{ type: "spring", duration: 2, delay:0.4, damping:50 }}
+      variants={{
+        visible: { opacity: 1, x: 0 },
+        hidden: { opacity: 0, x: -100 },
+      }}
+    >
+      <CountUp
+        {...rest}
+        start={viewPortEntered ? null : 0}
+        end={parseInt(number)}
+        delay={0.5}
+      >
         {({ countUpRef }) => {
-          return(
+          return (
             <VisibilitySensor
-            active={!viewPortEntered}
-            onChange={isVisible => {
-              if (isVisible) {
-                setViewPortEntered(true)
-              }
-            }}
+              active={!viewPortEntered}
+              onChange={(isVisible) => {
+                if (isVisible) {
+                  setViewPortEntered(true);
+                }
+              }}
             >
-          
-            <Span ref={countUpRef} />
-      
-          </VisibilitySensor>
-        )}}
+              <Span ref={countUpRef} />
+            </VisibilitySensor>
+          );
+        }}
       </CountUp>
 
       <Title>{title}</Title>
