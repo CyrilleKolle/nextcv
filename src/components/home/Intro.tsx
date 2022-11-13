@@ -33,7 +33,7 @@ const Img = styled.img`
   ${tw`object-fill`};
 `;
 const ImageDiv = styled(motion.div)`
-  ${tw`md:w-5/12 content-center items-center flex justify-center md: shadow-none`}
+  ${tw`md:(w-5/12 shadow-none pl-4) content-start items-start flex justify-start`}
   min-height: 300px;
   animation: 1s ease-out 0s 1 slideInFromLeft;
 

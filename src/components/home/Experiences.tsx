@@ -21,7 +21,7 @@ const CompetenciesContainer = styled.div`
 `;
 
 const Wrapper = styled.div`
-  ${tw`p-4 gap-4 md:p-20 content-center justify-between bg-black`}
+  ${tw`p-4 gap-4 (md:p-20 -mb-16) content-center justify-between bg-black`}
 `;
 
 const Title = styled.p`

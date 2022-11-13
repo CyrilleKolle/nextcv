@@ -15,7 +15,7 @@ const NavContainer = styled.div`
 
 const LogoButton = styled.button`
   ${tw`inline-flex p-3 rounded md:hidden  ml-auto `};
-  right:0;
+  right: 0;
 `;
 
 const NavBar = styled.nav`
@@ -23,12 +23,12 @@ const NavBar = styled.nav`
 `;
 
 const NameHeader = styled.div`
-  ${tw`w-full md:(w-1/3 h-20 place-content-center place-items-center flex drop-shadow-2xl rounded-r-sm)`};
+  ${tw`w-full md:(w-1/3 h-20 place-content-start content-start place-items-start flex drop-shadow-2xl rounded-r-sm)`};
   color: "#C39EA0";
 `;
 
 const NameText = styled.p`
-  ${tw`mx-auto text-5xl text-pinkish`}
+  ${tw`px-4 md:(px-12 mt-2) text-5xl text-pinkish`}
   font-family: Fantasy;
 `;
 
@@ -49,22 +49,17 @@ export const Header: React.FC = () => {
       </LogoButton> */}
       <div className={`${active ? "" : "hidden"} w-full md:hidden`}></div>
       <NameHeader>
-        <NameText>Cyrille Kolle</NameText>
+        <NameText>Cyrille K.</NameText>
       </NameHeader>
       <NavContainer>
         <LinkItem key="Education" label="Home" href="/" />
-        <LinkItem
-          key="Experience"
-          label="Experience"
-          href="/Contact"
-        ></LinkItem>
-        <LinkItem key="contact" label="Competencies" href="/Contact"></LinkItem>
+        <LinkItem key="Case" label="Cases" href="/Personal" />
         <LinkItem
           key="contact"
           label="Kontact"
           href="/Contact"
           hasBgdColor={true}
-        ></LinkItem>
+        />
       </NavContainer>
     </NavBar>
   );
