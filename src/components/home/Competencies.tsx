@@ -8,12 +8,13 @@ type CompetencyProps = {
 };
 
 interface Compentencies {
-  label: string;
-  image: string;
+  label?: string;
+  image?: string;
+  label2?: string
 }
 
 const CompetenciesContainer = styled.div`
-${tw`grid grid-rows-1 md:(grid-flow-col grid-rows-2 grid) lg:(grid-rows-4) justify-between`}
+${tw`grid grid-cols-2 sm:(grid-flow-col grid-rows-6 grid-cols-3) md:(grid-flow-col grid-rows-5 grid grid-cols-4) lg:(grid-rows-4 grid-cols-5) justify-between`}
 `;
 
 const Wrapper = styled.div`
@@ -44,6 +45,7 @@ export const Competencies: React.FC<CompetencyProps> = ({
               <CompentencyCard
                 image={competency.image}
                 label={competency.label}
+                label2={competency.label2}
              
               />
             ))}

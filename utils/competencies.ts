@@ -1,6 +1,7 @@
 type Competency = {
   image: string;
   label: string;
+  label2?: string; 
 };
 
 export const CompetenciesData: Competency[] = [
@@ -10,7 +11,8 @@ export const CompetenciesData: Competency[] = [
   },
   {
     image: "/data.svg",
-    label: "Data Processing",
+    label: "Data",
+    label2: "Processing",
   },
   {
     image: "/tailwind.svg",
@@ -38,7 +40,8 @@ export const CompetenciesData: Competency[] = [
   },
   {
     image: "/continuous.svg",
-    label: "Continuous Intergration",
+    label: "Continuous",
+    label2: "Intergration",
   },
   {
     image: "/css.svg",
@@ -74,7 +77,8 @@ export const CompetenciesData: Competency[] = [
   },
   {
     image: "/react-native.svg",
-    label: "React Native",
+    label: "React",
+    label2: 'Native',
   },
   {
     image: "/react.svg",
@@ -82,7 +86,8 @@ export const CompetenciesData: Competency[] = [
   },
   {
     image: "/responsive-design.svg",
-    label: "Responsive Design",
+    label: "Responsive",
+    label2: 'Design',
   },
   {
     image: "/scrum.svg",
@@ -94,7 +99,8 @@ export const CompetenciesData: Competency[] = [
   },
   {
     image: "/styled-component.svg",
-    label: "Style-Components",
+    label: "Style-",
+    label2: "Components",
   },
   {
     image: "/swift.svg",
