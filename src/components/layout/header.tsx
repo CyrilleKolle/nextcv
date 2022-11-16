@@ -53,7 +53,7 @@ export const Header: React.FC = () => {
       </NameHeader>
       <NavContainer>
         <LinkItem key="Education" label="Home" href="/" />
-        <LinkItem key="Case" label="Cases" href="/Personal" />
+        <LinkItem key="Portfolio" label="Portfolio" href="/Personal" />
         <LinkItem
           key="contact"
           label="Kontact"

@@ -3,7 +3,7 @@ import tw from "twin.macro";
 import styled, { css } from "styled-components";
 import { Page } from "../components/layout/page";
 import { PageLayout } from "../components/layout/pagelayout";
-import Intro from "../components/home/Intro";
+import {Intro} from "../components/home/Intro";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import { Competencies } from "../components/home/Competencies";
 import { ExperienceData } from "../../utils/experiences";

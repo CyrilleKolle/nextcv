@@ -2,9 +2,15 @@ import React from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
+import useWindowSize from '../../../tools/useWindowSize'
 
-const Wrapper = styled.div`
+type IntroProps = {
+  height?: number;
+}
+
+const Wrapper = styled.div<{height?: number}>`
   ${tw`flex flex-col md:(flex-row) w-full`};
+  height: ${(props) => props.height }px;
 `;
 const Description = styled(motion.div)`
   ${tw` flex block items-center justify-center md:() lg:()`};
@@ -46,7 +52,9 @@ const ImageDiv = styled(motion.div)`
     }
   }
 `;
-export default function Intro() {
+export const Intro: React.FC<IntroProps> = ({}: IntroProps) => {
+
+  const [height, width] = useWindowSize()
   return (
     <Wrapper>
       <ImageDiv

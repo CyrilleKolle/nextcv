@@ -13,7 +13,7 @@ type EducationCardProps = {
 };
 
 const EducationCardContainer = styled(motion.div)`
-  ${tw`flex flex-row md:flex-col justify-center content-center my-5`};
+  ${tw`flex flex-row md:flex-col justify-center content-center `};
 `;
 const Wrapper = styled(motion.div)`
   ${tw``};

@@ -29,7 +29,7 @@ const TextWrapper = styled.div`
 `;
 
 const Title = styled.p`
-  ${tw`leading-tight tracking-wider text-pinkish text-xl mb-4`}
+  ${tw`leading-tight tracking-wider text-pinkish text-xl mb-10`}
   font-family: Fantasy;
 `;
 const Description = styled(motion.p)`
@@ -45,7 +45,7 @@ export const AboutMe: React.FC<CompetencyProps> = ({
   competencies,
 }: CompetencyProps) => {
   const [viewPortEntered, setViewPortEntered] = useState(false);
-
+ 
   return (
     <Wrapper>
       <Title>About Me</Title>
