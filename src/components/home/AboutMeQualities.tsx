@@ -11,10 +11,10 @@ type QualityProps = {
 };
 
 const QualityContainer = styled(motion.div)`
-  ${tw`flex flex-col`};
+  ${tw`flex flex-col w-screen`};
 `;
 const Label = styled.p`
-  ${tw`text-white`};
+  ${tw`text-white `};
 `;
 const NumberLabel = styled.p`
   ${tw`text-white `};
@@ -26,7 +26,7 @@ const NumberContainer = styled.div`
   ${tw`bg-coal p-6 mb-1 mx-1`};
 `;
 const LabelContainer = styled.div`
-  ${tw`bg-coal p-6 mb-1 w-5/6`};
+  ${tw`bg-coal p-6 mb-1 w-full md:w-5/6`};
 `;
 
 const AboutMeQualities: React.FC<QualityProps> = ({ image, label }) => {

@@ -25,7 +25,7 @@ const Wrapper = styled.div`
 `;
 
 const TextWrapper = styled.div`
-  ${tw`md:w-3/5 content-center justify-between`}
+  ${tw`w-full md:w-3/5 content-center justify-between`}
 `;
 
 const Title = styled.p`
@@ -36,7 +36,7 @@ const Description = styled(motion.p)`
   ${tw`text-white text-lg mx-auto md:(mr-4)`}
 `;
 const QualityContainer = styled.div`
-  ${tw`flex  md:w-1/3 place-content-center`}
+  ${tw`flex w-full md:w-1/3 md:place-content-center `}
 `;
 const HorizontalDivider = styled.div`
   ${tw`mb-10`}
