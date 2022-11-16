@@ -15,6 +15,9 @@ module.exports = {
         'pantone': '#FF6C2F',
         'coal':'#333333'
       },
+      backgroundImage: {
+        'hero': "url('/ai_ml.png')",
+      }
     },
   },
   plugins: [],

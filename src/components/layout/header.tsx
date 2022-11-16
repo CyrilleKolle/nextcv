@@ -28,7 +28,7 @@ const NameHeader = styled.div`
 `;
 
 const NameText = styled.p`
-  ${tw`px-4 md:(px-12 mt-2) text-5xl text-pinkish`}
+  ${tw`text-3xl px-4 md:(px-12 mt-2 text-5xl) text-pinkish`}
   font-family: Fantasy;
 `;
 
