@@ -22,7 +22,7 @@ ${tw`p-4 gap-4 (md:p-20 -mb-16) content-center justify-between bg-black`}
 `;
 
 const Title = styled.p`
-${tw`leading-tight tracking-wider text-pinkish text-xl mb-10`}
+${tw`leading-tight tracking-wider text-pinkish text-xl mb-6 mt-10 md:(mb-10 mt-0)`}
 font-family: Fantasy;
 `;
 const Description = styled.p`

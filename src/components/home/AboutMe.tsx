@@ -21,7 +21,7 @@ const Container = styled.div`
 `;
 
 const Wrapper = styled.div`
-  ${tw`p-4 md:(p-20 -mb-16) flex flex-col  `}
+  ${tw`mt-20 p-4 md:(mt-0 p-20 -mb-16) flex flex-col  `}
 `;
 
 const TextWrapper = styled.div`
@@ -29,7 +29,7 @@ const TextWrapper = styled.div`
 `;
 
 const Title = styled.p`
-  ${tw`leading-tight tracking-wider text-pinkish text-xl mb-10`}
+  ${tw`leading-tight tracking-wider text-pinkish text-xl mb-6 md:mb-10`}
   font-family: Fantasy;
 `;
 const Description = styled(motion.p)`

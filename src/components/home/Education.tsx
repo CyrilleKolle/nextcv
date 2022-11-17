@@ -15,11 +15,11 @@ interface Schools {
 }
 
 const CompetenciesContainer = styled.div`
-  ${tw`grid grid-rows-1 md:(grid-flow-col grid-rows-1 grid) lg:(grid-rows-1) justify-between`}
+  ${tw`grid grid-rows-1 grid-cols-2 md:(grid-flow-col grid-cols-4 grid-rows-1 grid) lg:(grid-rows-1) justify-between`}
 `;
 
 const Wrapper = styled.div`
-  ${tw`p-4 gap-4 md:p-20 content-center justify-between bg-black`}
+  ${tw`mt-20 p-4 gap-4 md:(p-20 mt-0) content-center justify-between bg-black`}
 `;
 
 const Title = styled.p`
