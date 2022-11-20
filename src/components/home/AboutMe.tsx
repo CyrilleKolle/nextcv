@@ -64,7 +64,7 @@ export const AboutMe: React.FC<CompetencyProps> = ({
                   whileInView="visible"
                   exit={{x:-100}}
                   viewport={{ once: true }}
-                  transition={{ type: "spring", duration: 2, delay:0.4, damping:50 }}
+                  transition={{ type: "spring", duration: 2, delay:0.1, damping:50 }}
                   variants={{
                     visible: { opacity: 1, y: 0 },
                     hidden: { opacity: 0, y: 70 },
@@ -84,7 +84,7 @@ export const AboutMe: React.FC<CompetencyProps> = ({
                   whileInView="visible"
                   exit={{x:-100}}
                   viewport={{ once: true }}
-                  transition={{ type: "spring", duration: 2, delay:0.4, damping:50 }}
+                  transition={{ type: "spring", duration: 2, delay:0.1, damping:50 }}
                   variants={{
                     visible: { opacity: 1, y: 0 },
                     hidden: { opacity: 0, y: 70 },

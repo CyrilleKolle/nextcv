@@ -3,7 +3,7 @@ import tw from "twin.macro";
 import Link from "next/link";
 import { useState } from "react";
 import { ActiveLink } from "../header/ActiveLink";
-import { MobileMenu } from "../home/MobileMenu";
+import { MobileMenu } from "../header/MobileMenu";
 
 const NavLink = styled.a`
   ${tw`transition duration-500 ease-in-out transform shadow-inner md:( w-40 ) px-3 py-2 mx-2 rounded text-gray-100  font-bold items-center justify-center hover:(text-gray-500 transform scale-110 -translate-y-2 shadow-2xl bg-gray-100)`};
@@ -56,7 +56,7 @@ export const Header: React.FC = () => {
       </NameHeader>
       <NavContainer>
         <LinkItem key="Education" label="Home" href="/" />
-        <LinkItem key="Portfolio" label="Portfolio" href="/Personal" />
+        <LinkItem key="Portfolio" label="Portfolio" href="/Portfolio" />
         <LinkItem
           key="contact"
           label="Kontact"

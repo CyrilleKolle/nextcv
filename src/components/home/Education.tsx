@@ -37,9 +37,6 @@ export const Education: React.FC<EducationProps> = ({
   return (
     <Wrapper>
       <Title>Education</Title>
-      {/* <Description>
-        Schools and education so far over the years
-      </Description> */}
       <CompetenciesContainer>
         {schools != undefined ? (
           <>

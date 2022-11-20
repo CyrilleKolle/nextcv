@@ -2,7 +2,7 @@ import { motion, useCycle } from "framer-motion";
 import Link from "next/link";
 import styled from "styled-components";
 import tw from "twin.macro";
-import { ActiveLink } from "../header/ActiveLink";
+import { ActiveLink } from "./ActiveLink";
 const Path = (props) => (
   <motion.path
     fill="transparent"
@@ -161,7 +161,7 @@ export const MobileMenu: React.FC = () => {
 
         <Menu>
         <LinkItem key="Education" label="Home" href="/" />
-        <LinkItem key="Portfolio" label="Portfolio" href="/Personal" />
+        <LinkItem key="Portfolio" label="Portfolio" href="/Portfolio" />
         <LinkItem
           key="contact"
           label="Kontact"

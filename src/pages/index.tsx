@@ -38,7 +38,7 @@ const Home: React.FC<Props> = ({ items }: Props) => {
 
   return (
     /*     <motion.div style={{ scaleX: scaleX }} className="progress-bar"> */
-    <PageLayout title="Cyrille - Lia CV">
+    <PageLayout title="cyrille/cv">
       <Page>
         {
           <>

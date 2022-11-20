@@ -19,7 +19,7 @@ const Wrapper = styled.div`
   ${tw`flex flex-row h-full w-full mb-20`};
 `;
 const BlueBannerWrapper = styled.div`
-  ${tw`h-32 w-2/3 bg-blue-300 rounded-xl mx-auto relative`}
+  ${tw`h-32 w-2/3 bg-coal rounded-xl mx-auto relative`}
 `;
 const GrayMiniBanner = styled.div`
   ${tw`h-16 rounded-xl bg-gray-100 shadow-2xl w-4/5 shadow-inner right-0 float-right self-end absolute bottom-0 flex justify-center justify-items-center content-center flex-wrap rounded-bl-sm rounded-tr-sm`}
