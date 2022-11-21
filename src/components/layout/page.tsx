@@ -1,5 +1,4 @@
 import React, { ReactNode } from "react";
-import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import styled from "styled-components";
 import tw from "twin.macro";
 import Footer from "./footer";

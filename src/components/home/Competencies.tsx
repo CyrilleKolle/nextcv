@@ -25,19 +25,13 @@ const Title = styled.p`
 ${tw`leading-tight tracking-wider text-pinkish text-xl mb-6 mt-10 md:(mb-10 mt-0)`}
 font-family: Fantasy;
 `;
-const Description = styled.p`
-  ${tw`text-white mb-4 text-lg`}
-`;
+
 export const Competencies: React.FC<CompetencyProps> = ({
   competencies,
 }: CompetencyProps) => {
   return (
     <Wrapper>
       <Title>Current Areas of Competency</Title>
-      {/* <Description>
-        These are some of the work experiences I have gathered over the years
-        the last few years
-      </Description> */}
       <CompetenciesContainer>
         {competencies != undefined ? (
           <>

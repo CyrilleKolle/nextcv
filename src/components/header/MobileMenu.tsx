@@ -1,8 +1,9 @@
 import { motion, useCycle } from "framer-motion";
-import Link from "next/link";
 import styled from "styled-components";
 import tw from "twin.macro";
 import { ActiveLink } from "./ActiveLink";
+
+
 const Path = (props) => (
   <motion.path
     fill="transparent"

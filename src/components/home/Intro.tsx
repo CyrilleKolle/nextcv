@@ -23,12 +23,14 @@ height: 400px;
 `
 const Description = styled(motion.div)`
   ${tw`p-4 md:p-0 flex block items-center justify-center`};
+  font-family: Fantasy;
 `;
 const DescriptionText = styled.div`
   ${tw`text-2xl p-0 sm:(p-0 text-2xl) md:(text-7xl) lg:(text-8xl) flex flex-wrap flex-wrap whitespace-pre-line leading-tight`};
   font-family: Fantasy;
   background:linear-gradient(-60deg, #96DFD8, #85D4BE, #AEE6CB, #397D54, #5D6E1E, #235d3A);
   animation: gradient 15s ease infinite;
+  font-family: Fantasy;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 400% 400%;

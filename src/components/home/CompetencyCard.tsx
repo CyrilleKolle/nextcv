@@ -15,13 +15,9 @@ const CompetencyCardContainer = styled.div`
 `;
 const Label = styled.p`
   ${tw`text-coal`};
+  font-family: Fantasy;
 `;
-const CompetencySvg = styled.svg`
-  ${tw``};
-`;
-const Description = styled.p`
-  ${tw``};
-`;
+
 
 const CompetencyCard: React.FC<CompetencyCardProps> = ({
   image,

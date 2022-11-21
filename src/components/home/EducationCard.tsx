@@ -15,23 +15,26 @@ type EducationCardProps = {
 const EducationCardContainer = styled(motion.div)`
   ${tw`flex flex-col justify-center content-center `};
 `;
-const Wrapper = styled(motion.div)`
-  ${tw``};
-`;
+
 const Title = styled.p`
   ${tw`text-coal`};
+  font-family: Fantasy;
 `;
 const Description = styled.p`
   ${tw`text-white`};
+  font-family: Fantasy;
 `;
 const Number = styled.p`
   ${tw`text-white`};
+  font-family: Fantasy;
 `;
 const Span = styled.span`
   ${tw`text-white font-black text-6xl`};
+  font-family: Fantasy;
 `;
 const Location = styled.p`
   ${tw`text-white`}
+  font-family: Fantasy;
 `;
 const EducationCard: React.FC<EducationCardProps> = ({
   number,

@@ -26,9 +26,6 @@ const Title = styled.p`
   ${tw`leading-tight tracking-wider text-pinkish text-xl mb-10`}
   font-family: Fantasy;
 `;
-const Description = styled.p`
-  ${tw`text-white mt-10 text-lg`}
-`;
 
 export const Education: React.FC<EducationProps> = ({
   schools: schools,

@@ -15,27 +15,30 @@ const QualityContainer = styled(motion.div)`
 `;
 const Label = styled.p`
   ${tw`text-white `};
+  font-family: Fantasy;
 `;
 const NumberLabel = styled.p`
   ${tw`text-white `};
+  font-family: Fantasy;
 `;
 const QualityWrapper = styled(motion.div)`
   ${tw`flex flex-row justify-self-end`};
 `;
 const NumberContainer = styled.div`
-  ${tw`bg-coal p-6 mb-1 mx-1`};
+  ${tw`bg-coal p-6 md:p-4 mb-1 mx-1`};
 `;
 const LabelContainer = styled.div`
-  ${tw`bg-coal p-6 mb-1 w-full md:w-5/6`};
+  ${tw`bg-coal p-6 md:p-4 mb-1 w-full md:w-5/6`};
 `;
 
 const AboutMeQualities: React.FC<QualityProps> = ({ image, label }) => {
   const qualities = [
-    "Happy",
-    "Persistent",
-    "Solution-Oriented",
-    "jdjdjdjjdjjd",
-    "hhfhhfhfhfh",
+    "Team Player",
+    "Consistent",
+    "Flexible",
+    "Independent",
+    "Leader",
+    "Respectful"
   ];
   const [viewPortEntered, setViewPortEntered] = useState(false);
 

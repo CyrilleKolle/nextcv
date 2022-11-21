@@ -2,7 +2,7 @@ import React from "react";
 import tw from "twin.macro";
 import styled, { css } from "styled-components";
 import { Page } from "../components/layout/page";
-import ContactBanner from "../components/Person/ContactBanner";
+import InfoBanner from "../components/helper/InfoBanner";
 import { PageLayout } from "../components/layout/pagelayout";
 const Wrapper = styled.div`
   ${tw`pb-10 flex flex-col justify-center justify-items-center`}
@@ -13,7 +13,7 @@ export default function Contact({ cars }) {
     <PageLayout title="cyrille/contact">
     <Page>
       <Wrapper>
-        <ContactBanner />
+        <InfoBanner />
       </Wrapper>
     </Page>
     </PageLayout>
