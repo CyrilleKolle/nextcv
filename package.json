@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "react-scripts --openssl-legacy-provider start"
+    "start": "next start"
   },
   "dependencies": {
     "@emotion/react": "^11.1.5",
